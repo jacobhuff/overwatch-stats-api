@@ -9,7 +9,7 @@ module.exports = async (battletag, platform) => {
 	
 	const res = await fetch(url);
 	
-	const html = await res.text();
+	const html = await res.body.text();
 	
 	//load into cheerio
 	const $ = cheerio.load(html);
