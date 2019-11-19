@@ -5,7 +5,7 @@ const fetch = require('node-fetch')
 
 module.exports = async (battletag, platform) => {
 	
-	const url = encodeURI(`https://playoverwatch.com/en-us/career/${platform}/${battletag}`);
+	const url = encodeURI(`/api/https://playoverwatch.com/en-us/career/${platform}/${battletag}`);
 	
 	const res = await fetch(url);
 	if(!res || !res.ok) {
