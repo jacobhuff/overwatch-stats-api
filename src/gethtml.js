@@ -8,9 +8,6 @@ module.exports = async (battletag, platform) => {
 	const url = encodeURI(`/api?url=https://playoverwatch.com/en-us/career/${platform}/${battletag}`);
 	
 	const res = await fetch(url);
-	if(!res || !res.ok) {
-		throw new Error('PROFILE_NOT_FOUND');
-	}
 	
 	const html = await res.text();
 	
